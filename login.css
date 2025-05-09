@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Chế độ sáng (mặc định) */
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#2196f3, #e91e63);
+    color: #333;
+}
+
+body.dark-mode {
+    background: linear-gradient(#1a1a1a, #4b0082);
+    color: #ddd;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    background: linear-gradient(to right, rgb(1, 3, 27), #171ae3);
+    margin: 0 auto;
+    padding: 14px 0;
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+body.dark-mode ul {
+    background: linear-gradient(to right, #1a1a1a, #4b0082);
+}
+
+h3 {
+    color: #fff;
+    text-align: center;
+    margin-left: -200px;
+    margin-right: 100px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+li {
+    margin: 0 15px;
+}
+
+.ch {
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 14px;
+    border: 1px solid #0736ff;
+    border-radius: 6px;
+    box-shadow: 1px 1px 6px rgba(7, 36, 255, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+body.dark-mode .ch {
+    border: 1px solid #8a2be2;
+    box-shadow: 1px 1px 6px rgba(138, 43, 226, 0.5);
+}
+
+.ch:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+body.dark-mode .ch:hover {
+    background-color: #555;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 8px;
+    margin-right: 250px;
+    vertical-align: middle;
+}
+
+.btn-theme, .btn-lang {
+    background: #fff;
+    color: #333;
+    border: 1px solid #0736ff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+body.dark-mode .btn-theme, body.dark-mode .btn-lang {
+    background: #333;
+    color: #ddd;
+    border: 1px solid #8a2be2;
+}
+
+.btn-theme:hover, .btn-lang:hover {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+body.dark-mode .btn-theme:hover, body.dark-mode .btn-lang:hover {
+    background-color: #555;
+}
+
+.footer {
+    background: linear-gradient(to right, #171ae3, rgb(1, 3, 27));
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+body.dark-mode .footer {
+    background: linear-gradient(to right, #4b0082, #1a1a1a);
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #cccccc;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 35%;
+    margin-bottom: 30px;
+}
+
+.form-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .form-wrapper {
+    background: #2a2a2a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.wrapper.animate-signUp .form-wrapper.sign-in {
+    transform: rotate(7deg);
+    animation: animateRotate 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.wrapper.animate-signIn .form-wrapper.sign-in {
+    animation: animateSignIn 1.5s ease-in-out forwards;
+}
+
+@keyframes animateSignIn {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+.wrapper .form-wrapper.sign-up {
+    transform: rotate(7deg);
+}
+
+.wrapper.animate-signIn .form-wrapper.sign-up {
+    animation: animateRotate 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes animateRotate {
+    0% {
+        transform: rotate(7deg);
+    }
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+
+.wrapper.animate-signUp .form-wrapper.sign-up {
+    animation: animateSignUp 1.5s ease-in-out forwards;
+}
+
+@keyframes animateSignUp {
+    0% {
+        transform: translateX(0);
+        z-index: 1;
+    }
+    50% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0) rotate(7deg);
+    }
+}
+
+h2 {
+    font-size: 30px;
+    color: #555;
+    text-align: center;
+}
+
+body.dark-mode h2 {
+    color: #ccc;
+}
+
+.input-group {
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+body.dark-mode .input-group label {
+    color: #ddd;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #333;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid #333;
+    outline: none;
+    border-radius: 5px;
+}
+
+body.dark-mode .input-group input {
+    color: #ddd;
+    border: 1px solid #ddd;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: 0;
+    font-size: 12px;
+    background: #fff;
+}
+
+body.dark-mode .input-group input:focus~label,
+body.dark-mode .input-group input:valid~label {
+    background: #2a2a2a;
+}
+
+.forgot-pass {
+    margin: -15px 0 15px;
+}
+
+.forgot-pass a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+body.dark-mode .forgot-pass a {
+    color: #ddd;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #2196f3, #e91e63);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+body.dark-mode .btn {
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.sign-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.sign-link p {
+    color: #333;
+}
+
+body.dark-mode .sign-link p {
+    color: #ddd;
+}
+
+.sign-link p a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+body.dark-mode .sign-link p a {
+    color: #ff69b4;
+}
+
+.sign-link p a:hover {
+    text-decoration: underline;
+}

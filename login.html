@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WL login/signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <ul>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h3>WL : Win every fLight</h3>
+        <li><a class="ch" href="home.html" data-lang="home">Trang chủ</a></li>
+        <li><a class="ch" href="qlforcustomer.html" data-lang="flight-info">Thông tin chuyến bay đã đặt</a></li>
+        <li><a class="ch" href="https://www.facebook.com/profile.php?id=100045879113275" data-lang="help">Trợ giúp</a></li>
+        <li><a class="ch" href="login.html" data-lang="login-signup">Log in/Sign up</a></li>
+        <li><button id="theme-toggle" class="btn-theme">🌙</button></li>
+        <li><button id="lang-toggle" class="btn-lang">EN</button></li>
+    </ul>
+    <div class="wrapper">
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2 data-lang="signup">Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label for="" data-lang="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label for="" data-lang="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label for="" data-lang="password">Password</label>
+                </div>
+                <button type="submit" class="btn" data-lang="signup-btn">Sign Up</button>
+                <div class="sign-link">
+                    <p><span data-lang="already-account">Already have an account?</span> <a href="#" class="signIn-link" data-lang="signin">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-wrapper sign-in">
+            <form id="login-form" action="">
+                <h2 data-lang="login">Login</h2>
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="" data-lang="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="" data-lang="password">Password</label>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#" data-lang="forgot-pass">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" data-lang="login-btn">Login</button>
+                <div class="sign-link">
+                    <p><span data-lang="no-account">Don't have an account?</span> <a href="#" class="signUp-link" data-lang="signup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <p data-lang="copyright">© 2024 WL: Win every fLight. All rights reserved.</p>
+            <p><span data-lang="contact">Contact us:</span> <a href="mailto:WL@winflight.com">WL@winflight.com</a></p>
+            <p>
+                <a class="ch2" href="#" data-lang="phone">SĐT : 0988241156</a> |
+                <a class="ch2" href="https://maps.app.goo.gl/Rk8J7Qg5cd9ZuGhJA?g_st=com.google.maps.preview.copy" data-lang="address">Địa Chỉ : Quận Hà Đông Thành Phố Hà Nội</a>
+            </p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
